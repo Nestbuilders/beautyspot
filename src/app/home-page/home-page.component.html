@@ -1,0 +1,264 @@
+<nav class="navbar">
+    <div class="display_fle">
+        <img src="assets/logo_new.png" alt="logo_new" routerLink="/home" class="logo_fixed">
+        <img src="assets/name_logo.png" alt="logo_new" class="name_logo_fixed">
+    </div>
+
+    <div class="navbar-content">
+        <div class="nav-bar-service">
+            <ul class="navbar-menu">
+                <li><a href="#service">Service</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#enquiry">Enquiry</a></li>
+                <li><a href="#home">Appointment</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- @for(menu of menulist;track $index){
+                <li><a href="#{{menu?.url}}">{{menu?.name}}</a></li>
+                } -->
+
+
+            </ul>
+        </div>
+    </div>
+    <div class="navbar-content-phone-no display">
+        <mat-icon>call</mat-icon>&nbsp;&nbsp;
+        <p style="font-weight: bold;">+91-9585020969</p>
+    </div>
+    <div class="progress-container">
+        <div class="progress-bar" [style.width.%]="scrollPercentage"></div>
+    </div>
+</nav>
+<nav class="navbar_bottom">
+    <!-- <div style="display: flex;align-items: center;">
+        <img src="assets/logo_new.png" alt="logo_new" routerLink="/home" class="logo_fixed">
+        <img src="assets/name_logo.png" alt="logo_new" class="name_logo_fixed">
+    </div> -->
+
+    <div class="navbar-content">
+        <div>
+            <ul class="navbar-menu_icon">
+                <!-- <li><a href="#service">Service</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#enquiry">Enquiry</a></li>
+                <li><a href="">Appointment</a></li>
+                <li><a href="#footer">Contact</a></li> -->
+                @for(menu of menulist;track $index){
+                <!-- <li><a href="#{{menu?.url}}">{{menu?.name}}</a></li> -->
+                <!-- <span class="material-icons" style="color:white;font-size: 30px;  ">{{menu?.logo}}</span> -->
+                <li><a href="#{{menu?.url}}"><span class="material-icons"
+                            style="color:white;font-size: 30px;">{{menu?.logo}}</span></a></li>
+                }
+
+
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="progress-container">
+        <div class="progress-bar" [style.width.%]="scrollPercentage"></div>
+    </div> -->
+</nav>
+
+<!-- <div class="fixed_bottom">
+    
+</div> -->
+<img src="assets/whatsss.jpg" (click)="whatsapp()" alt="WhatsApp" class="whatsapp-logo">
+<img src="assets/telegramm.png" (click)="Telegram()" alt="Telegram" class="telegram-logo">
+
+
+<div class="content_">
+    <!-- First image spans full page -->
+    <div class="container1" id="/home">
+        <div class="bg bg1">
+            <div class="desc"><span>Bringing Your Bridal Beauty </span><br><span>Vision to Life</span>
+                <br /><br />
+                <button class="premium-btn"  href="#modalCta" data-bs-toggle="modal">Book Appointment </button>
+                <!-- <br/><br/> <mat-icon>arrow_forward</mat-icon>
+                <button class="glow-btn">Glow Effect</button> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Second section with some content -->
+    <div style="display: flex;">
+        <section class="section">
+            <h2>Bridal Makeup</h2>
+            <p>At Beauty Spot, we specialize in creating flawless bridal makeup looks that reflect your unique beauty on
+                the most important day of your life. From soft and natural to glamorous and bold, our expert team
+                ensures you walk down the aisle with confidence and grace.</p>
+        </section>
+        <section class="section_side card-body display">
+            <div class="card">
+                <div class="image-box">
+                    <img src="/assets/dark_yellow.jpg">
+                </div>
+                <div class="content">
+                    <h2>Ford Mustang 1969</h2>
+                    <p>The 1969 Ford Mustang epitomizes the iconic American muscle car era with its sleek design and
+                        powerful performance.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Second image spans full page -->
+    <div class="container1" id="/bridal">
+        <div class="bg bg2">
+            <div class="desc">Second Parallax Section</div>
+        </div>
+    </div>
+
+    <!-- Third section with some content -->
+    <div style="display: flex;">
+        <section class="section display">
+            <div class="card">
+                <div class="image-box">
+                    <img src="/assets/dark_yellow.jpg">
+                </div>
+                <div class="content">
+                    <h2>Ford Mustang 1969</h2>
+                    <p>The 1969 Ford Mustang epitomizes the iconic American muscle car era with its sleek design and
+                        powerful performance.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section_side">
+            <h2>Groom Makeup</h2>
+            <p>Your wedding day is one of the most important moments of your life, and as a groom, all eyes will be on
+                you as well. While bridal makeup often gets the spotlight, groom makeup is just as crucial for ensuring
+                you look fresh, confident, and camera-ready throughout the day.</p>
+        </section>
+    </div>
+
+    <!-- Third image spans full page -->
+    <div class="container1" id="/offers">
+        <div class="bg bg3">
+            <div class="desc">Third Parallax Section</div>
+        </div>
+    </div>
+
+    <section class="section_card card_body">
+        <div class="card">
+            <div class="image-box">
+                <img src="/assets/black.jpg">
+            </div>
+            <div class="content">
+                <h2>Ford Mustang 1969</h2>
+                <p>The 1969 Ford Mustang epitomizes the iconic American muscle car era with its sleek design and
+                    powerful performance.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-box">
+                <img src="/assets/fashion.jpg">
+            </div>
+            <div class="content">
+                <h2>Ford Mustang 1969</h2>
+                <p>The 1969 Ford Mustang epitomizes the iconic American muscle car era with its sleek design and
+                    powerful performance.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-box">
+                <img src="/assets/orange.jpg">
+            </div>
+            <div class="content">
+                <h2>Ford Mustang 1969</h2>
+                <p>The 1969 Ford Mustang epitomizes the iconic American muscle car era with its sleek design and
+                    powerful performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Third image spans full page -->
+    <div class="container1" id="/service">
+        <div class="bg bg4">
+            <div class="desc">Fourth Parallax Section</div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer-wrapper" id="/contact">
+    <div class="footer-container">
+        <div class="foot">
+            <span>Contact Details</span>
+        </div>
+        <div class="foot">
+            <span>Shop Timing Availabilities</span>
+        </div>
+        <div class="foot">
+            <span>Service Provide</span>
+        </div>
+        <div class="foot-4">
+            <span>Location Map Attached</span>
+        </div>
+    </div>
+</footer>
+
+<button style="display: none;" class="btn btn-primary" id="myButton" data-bs-toggle="modal"
+    data-bs-target="#exampleModaltax">pop up</button>
+<div class="modal fade" id="exampleModaltax" data-backdrop="static" data-keyboard="false" role="dialog" tabindex="-5">
+    <div class="modal-dialog modal-l" role="document" >
+        <div class="modal-content" >
+            <div class="modal-header class_30">
+                <h2 class="class_31"></h2>
+                <button type="button" style="color: darkred;" class="btn-close" data-bs-dismiss="modal" #closedbuttons
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h1>Offer %</h1>
+            </div>
+            <div class="modal-footer">
+                <!-- <button class="CancelButtonMain class_59" data-bs-dismiss="modal">Back</button> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalCta" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Contact Us</h4>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <form class="rd-form rd-form-variant-2 rd-mailform" data-form-output="form-output-global"
+                    data-form-type="contact-modal" method="post" action="bat/rd-mailform.php">
+                    <div class="row row-14 gutters-14">
+                        <div class="col-12">
+                            <div class="form-wrap">
+                                <input class="form-input" id="contact-modal-name" type="text" name="name"
+                                    data-constraints="@Required">
+                                <label class="form-label" for="contact-modal-name">Your Name</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-wrap">
+                                <input class="form-input" id="contact-modal-email" type="email" name="email"
+                                    data-constraints="@Email @Required">
+                                <label class="form-label" for="contact-modal-email">E-mail</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-wrap">
+                                <input class="form-input" id="contact-modal-phone" type="text" name="phone"
+                                    data-constraints="@Numeric">
+                                <label class="form-label" for="contact-modal-phone">Phone</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-wrap">
+                                <label class="form-label" for="contact-modal-message">Message</label>
+                                <textarea class="form-input textarea-lg" id="contact-modal-message" name="message"
+                                    data-constraints="@Required"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button button-primary button-pipaluk" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
